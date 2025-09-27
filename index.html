@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oakwood Studio</title>
+    <meta name="description" content="Oakwood Studio – an ad hoc space for art, culture, and technology" />
+    <style>
+      :root {
+        --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+        --sans: Arial, Helvetica, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: var(--mono);
+        line-height: 1.6;
+        color: #0f172a; /* slate-900 */
+        background: #fff;
+        ::selection {
+          background: #000;
+          color: #fff;
+        }
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--sans);
+        line-height: 1.25;
+        margin: 1rem 0 0rem;
+        color: #0b1220;
+        /* letter-spacing: -0.05em; */
+      }
+      h1 { font-size: 3rem; font-weight: 400; }
+      h2 { font-size: 1rem; font-weight: 600; }
+      h3 { font-size: 1.25rem; }
+
+      .container {
+        max-width: 32em;
+        font-size: .8em;
+        margin: 8em auto;
+        padding: 0 20px;
+      }
+      .muted { color: #475569; }
+      ul { padding-left: 1.2rem; }
+      li { margin: 0.2rem 0; }
+      code, pre, kbd, samp { font-family: var(--mono); }
+      a { color: #0ea5e9; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      hr { border: none; border-top: 1px solid #e2e8f0; margin: 1.5rem 0; }
+      #title-link { 
+        text-decoration: none; 
+        opacity: 0.6;
+        color: #000;
+      }
+      #title-link:hover { text-decoration: underline; }
+      /* People list links */
+      .people { list-style: none; padding-left: 0; }
+      .person-link { position: relative; color: inherit; text-decoration: none; padding-left: 1.25em; }
+      .person-link:hover { text-decoration: none; }
+      .person-link::before { content: '->'; position: absolute; left: 0; opacity: 0; }
+      .person-link:hover::before { opacity: 1; }
+      /* Hover preview window */
+      .hover-preview { position: fixed; top: 0; left: 0; width: 320px; height: 200px; border: 1px solid #e2e8f0; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: none; z-index: 1000; pointer-events: none; }
+      .hover-preview iframe { width: 100%; height: 100%; border: 0; }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+
+        <div style="display: flex; flex-direction: column; gap: 0rem;">
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%; height: 32em; border-radius: 0.5em; aspect-ratio: 1/1; margin: 0 auto; margin-bottom: 2em; overflow: hidden;">
+                <img src="images/studio1.jpeg" alt="Oakwood Studio" style="object-fit: cover; width: 100%; height: 100%; user-select: none;" />
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0rem; width: 100%; margin: 2em auto; text-align: center;">
+                <h1>oakwood studio</h1>
+                <p>Oakwood Street, San Francisco, CA</p>
+                <div id="map-embed" style="display: none; width: 100%; max-width: 32em; height: 18em; margin: 0.75em auto 0; border-radius: 0.5em; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.12);">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.2551325089!2d-122.42496480000001!3d37.7606155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e17f703569b%3A0x24f35b6908f755fe!2sOakwood%20St%2C%20San%20Francisco%2C%20CA%2094110!5e0!3m2!1sen!2sus!4v1758933147696!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p style="white-space: nowrap; margin: 2em 0;">ad hoc space for art, culture, and technology</p>
+
+            </div>
+
+
+            <div style="display: flex; flex-direction: column; gap: 0rem; width: 90%; margin: 0 auto;">
+                
+                
+                <h2>Active Members</h2>
+                <ul class="people">
+                    <li><a class="person-link" data-preview="./members/nic-becker/index.html" target="_blank" rel="noopener noreferrer" href="./members/nic-becker/index.html">Nic Becker</a></li>
+                    <li><a class="person-link" data-preview="./members/azlen-elza/index.html" target="_blank" rel="noopener noreferrer" href="./members/azlen-elza/index.html">Azlen Elza</a></li>
+                    <li><a class="person-link" data-preview="./members/ozzie-kirkby/index.html" target="_blank" rel="noopener noreferrer" href="./members/ozzie-kirkby/index.html">Ozzie Kirkby</a></li>
+                    <li><a class="person-link" data-preview="./members/neilson-koerner-safrata/index.html" target="_blank" rel="noopener noreferrer" href="./members/neilson-koerner-safrata/index.html">Neilson Koerner-Safrata</a></li>
+                    <li><a class="person-link" data-preview="./members/matthew-siu/index.html" target="_blank" rel="noopener noreferrer" href="./members/matthew-siu/index.html">Matthew Siu</a></li>
+                </ul>
+                <div id="hover-preview" class="hover-preview" aria-hidden="true"></div>
+            </div>
+        </div>
+    
+    </main>
+   
+  </body>
+  </html>
+
+
