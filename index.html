@@ -61,7 +61,7 @@
         width: 100dvw;
         height: 100dvh;
         min-height: 100dvh;
-        max-width: 42em; /* {max-width: sm phone size */
+        max-width: 56em; /* {max-width: sm phone size */
         max-height: 100dvh;
         font-size: .8em;
         margin: 0em auto;
@@ -71,7 +71,7 @@
 
       .padding {
         position: absolute;
-        inset: 3em;
+        inset: 8em;
         display: block;
       }
 
@@ -103,7 +103,14 @@
       .person-link { position: relative; color: inherit; text-decoration: none; }
 
       .image {
-        height: 48em;
+        /* max-height: 48em; */
+        flex-grow: 1;
+   
+      }
+
+      .image img {
+        object-position: left;
+        /* object-fit: cover; */
       }
 
       .title {
@@ -121,15 +128,15 @@
           max-width: 100%;
         }
 
+        .padding {
+          inset: 2em;
+        }
+
         h1 {
           font-size: 3.5em;
         }
         h2 {
           font-size: 1.75em;
-        }
-
-        .image {
-          height: 40em;
         }
       }
 
@@ -148,12 +155,6 @@
           font-size: 1.5em;
         }
 
-        .image {
-          height: 28em;
-          margin-top: 0em;
-          margin-bottom: 1em;
-        }
-
         .title {
           margin: 1em auto;
         }
@@ -170,7 +171,7 @@
                 <img src="images/studio-full.jpg" alt="Oakwood Studio" style="object-fit: cover; width: 100%; height: 100%; user-select: none;" />
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0em; padding: 2em;">
+            <div style="display: flex; flex-direction: column; gap: 0em; padding: 1em;">
               <div class="title" style="display: flex; flex-direction: column; width: 100%;">
                 <h1 style="white-space: nowrap;">oakwood studio</h1>
                 <p style="font-family: var(--mono); text-align: left;">Oakwood Street, San Francisco, CA</p>
